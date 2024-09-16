@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- APlayer CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"/>
+    <title>Playlist</title>
+    <style>
+        .logo {
+            margin-left: -50px;
+            padding: 20px;
+            width: 180px;
+            cursor: pointer;
+        }
+
+        .navbar ul li {
+            font-family: 'Roboto', sans-serif;
+            list-style-type: none;
+            display: inline-block;
+            margin: 0 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .navbar ul li:hover {
+            background-color: rgb(248, 240, 225);
+            color: black;
+        }
+
+        .active {
+            background-color: rgb(248, 240, 225);
+            color: black;
+        }
+
+        .arrow {
+            font-size: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #5f5f5f;
+            font-size: 15px;
+        }
+    
+        body {
+            background-color: #fbc0c0;
+            font-family: Open sans;
+        }
+
+        img {
+            width: 80%;
+            min-height: 100px;
+        }
+
+        .main {
+            padding: 40px 0;
+        }
+
+        h1 {
+            padding: 80px;
+            font-size: 40px;
+            margin-bottom: 34px;
+            border-bottom: 4px solid #e6e6e6;
+            padding-bottom: 15px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        .right-col1 {
+            float: right;
+            margin-left: -5%;
+            margin-top: -10px;
+            display: flex;
+            align-items: center;
+        }  
+
+        .right-col2 {
+            float: right;
+            margin-left: -5%;
+            margin-top: -10px;
+            display: flex;
+            align-items: center;
+        }  
+
+        .right-col3 {
+            float: right;
+            margin-left: -5%;
+            margin-top: -10px;
+            display: flex;
+            align-items: center;
+        }  
+
+        .playlist{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: -200%;
+            padding: 30px 0;
+            background: var(--background);
+            z-index: 3;
+            transition: 1s;
+            overflow: auto;
+        }
+
+        .playlist.active{
+            right: 0;
+        }
+
+        .title{
+            font-weight: 300;
+            font-size: 40px;
+            text-align: center;
+            margin-top: 15px;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+        }
+
+        .queue{
+            width: 100%;
+            height: 80px;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            border-top: 2px solid var(--alpha-color);
+            background-color: #fbc0c0;
+            margin-left: 550px;
+        }
+
+        .queue-cover{
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .queue-cover img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .queue-cover i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            color: var(--primary-color);
+            display: none;
+        }
+
+        .queue.active i{
+            display: block;
+        }
+
+        .queue .name{
+            font-size: 22px;
+            text-transform: capitalize;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="centeral">
+            <div class="navbar">
+                <img src="logo (1).png" class="logo">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="music.html">MUSIC</a></li>
+                    <li><a href="mashup.html">MASHUP</a></li>
+                    <li class="active"><a href="playlist.html">PLAYLIST</a></li>
+            </div>
+        </div>
+    </div>
+    <section class="playlist active">
+    
+        <h1 class="title">LOVE</h1><br>
+    
+        <div class="queue active">
+            <div class="right-col1">
+                <img src="songs/play.png" id="icon">
+            </div>
+            <div class="queue-cover">
+                <img src="songs/love1.png" alt="">
+                <i class="fas fa-pause"></i>
+            </div>
+            <p class="name" style="font-size: 25px;">Boyfriend</p>
+        </div>
+        <br>
+        <br>
+        <div class="queue active">
+            <div class="right-col2">
+                <img src="songs/play.png" id="icon">
+            </div>
+            <div class="queue-cover">
+                <img src="songs/love2.png" alt="">
+                <i class="fas fa-pause"></i>
+            </div>
+            <p class="name" style="font-size: 25px;">Don't let me down</p>
+        </div>
+        <br>
+        <br>
+        <div class="queue active">
+            <div class="right-col3">
+                <img src="songs/play.png" id="icon">
+            </div>
+            <div class="queue-cover">
+                <img src="songs/love3.png" alt="">
+                <i class="fas fa-pause"></i>
+            </div>
+            <p class="name" style="font-size: 25px;">We don't talk anymore</p>
+        </div>
+    </section>
+
+</body>
+    
+</html>

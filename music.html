@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- APlayer CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"/>
+    <title>Music</title>
+    <style>
+        .logo {
+            margin-left: -40px;
+            padding: 20px;
+            width: 180px;
+            cursor: pointer;
+        }
+
+        .navbar ul li {
+            font-family: 'Roboto', sans-serif;
+            list-style-type: none;
+            display: inline-block;
+            margin: 0 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .navbar ul li:hover {
+            background-color: rgb(248, 240, 225);
+            color: black;
+        }
+
+        .active {
+            background-color: rgb(248, 240, 225);
+            color: black;
+        }
+
+        .arrow {
+            font-size: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #5f5f5f;
+            font-size: 15px;
+        }
+    
+        body {
+            background-color: #fbc0c0;
+            font-family: Open sans;
+        }
+
+        img {
+            width: 80%;
+            min-height: 100px;
+        }
+
+        .main {
+            padding: 40px 0;
+        }
+
+        h3 {
+            font-size: 40px;
+            margin-bottom: 34px;
+            border-bottom: 4px solid #e6e6e6;
+            padding-bottom: 15px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        h4 {
+            font-size: 23px;
+            text-transform: uppercase;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        #aplayer {
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            box-shadow: 0 -2px 2px #dadada;
+            background-color: #fff;
+            transition: all ease 0.5s;
+        }
+
+        #aplayer.showPlayer {
+            bottom: 0;
+        }
+
+        span {
+            color: #000 !important;
+            font-size: 16px;
+        }
+
+        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+            background: #e0e0e0;
+            height: 4px;
+        }
+
+        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+            height: 4px;
+            background-color: #2196F3 !important;
+        }
+
+        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
+            background-color: #2196F3 !important;
+        }
+
+        .aplayer .aplayer-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
+            fill: #000;
+        }
+
+        .aplayer .aplayer-info .aplayer-music {
+            margin-bottom: 5px;
+        }
+
+        .right-col1 {
+            float: right;
+            margin-right: -5%;
+            margin-top: -90px;
+            display: flex;
+            align-items: center;
+        }        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="centeral">
+            <div class="navbar">
+                <img src="logo (1).png" class="logo">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li class="active"><a href="music.html">MUSIC</a></li>
+                    <li><a href="playlist.html">PLAYLIST</a></li>
+                    <li><a href="http://127.0.0.1:5000  ">MASHUP</a></li>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3> New Releases </h3>
+                    <div class="right-col1">
+                        <img src="songs/play.png" id="icon">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="album-poster" data-switch="0">
+                        <img src="songs/baby.jpg" alt="">
+                    </a>
+                    <h4>Baby</h4>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="album-poster" data-switch="1">
+                        <img src="songs/cl.jpeg" alt="">
+                    </a>
+                    <h4>Closer</h4>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="album-poster" data-switch="2">
+                        <img src="songs/roses.jpeg" alt="">
+                    </a>
+                    <h4>Roses</h4>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="album-poster" data-switch="3">
+                        <img src="songs/soy.jpeg" alt="">
+                    </a>
+                    <h4>Shape of you</h4>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="album-poster" data-switch="4">
+                        <img src="songs/ts.jpeg" alt="">
+                    </a>
+                    <h4>Love story</h4>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="album-poster" data-switch="5">
+                        <img src="songs/dtd.jpg" alt="">
+                    </a>
+                    <h4>Dusk till Dawn</h4>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="album-poster" data-switch="6">
+                        <img src="songs/hw.jpg" alt="">
+                    </a>
+                    <h4>Heat waves</h4>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="album-poster" data-switch="7">
+                        <img src="songs/lhg.jpg" alt="">
+                    </a>
+                    <h4>Let her go</h4>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="album-poster" data-switch="8">
+                        <img src="songs/dl.jpg" alt="">
+                    </a>
+                    <h4>Dandelions</h4>
+                </div>
+            </div>
+    
+            </div>
+        </div>
+    </div>
+    
+    <div id="aplayer"></div>
+    
+        <!-- Jquery Link -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <!-- Bootstrap Link -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <!-- APlayer Jquery link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>	
+    
+        <script>
+    
+            $(".album-poster").on('click', function(e){
+                var dataSwitchId = $(this).attr('data-switch');
+                ap.list.switch(dataSwitchId);
+                ap.play();
+                $("#aplayer").addClass('showPlayer');
+             });
+    
+            const ap = new APlayer({
+                container: document.getElementById('aplayer'),
+                listFolded: true,
+                audio: [
+                {
+                    name: 'Baby',
+                    artist: 'Justin Bieber',
+                    url: 'songs/baby.mp3',
+                    cover: 'songs/baby.jpg'
+                },
+                {
+                    name: 'Closer',  
+                    artist: 'Chainsmokers', 
+                    url: 'songs/cl.mp3', 
+                    cover: 'songs/cl.jpeg' 
+                },
+                {
+                    name: 'Roses',
+                    artist: 'Chainsmokers',
+                    url: 'songs/roses.mp3',
+                    cover: 'songs/roses.jpeg',
+                },
+                {
+                    name: 'Shape of you',
+                    artist: 'Ed Sheeran',
+                    url: 'songs/soy.mp3',
+                    cover: 'songs/soy.jpeg',
+                },
+                {
+                    name: 'Love story',
+                    artist: 'Taylor Swift',
+                    url: 'songs/ts.mp3',
+                    cover: 'songs/ts.jpeg',
+                },
+                {
+                    name: 'Dusk till Dawn',
+                    artist: 'Zayn',
+                    url: 'songs/dtd.mp3',
+                    cover: 'songs/dtd.jpg',
+                },
+                {
+                    name: 'Heat Waves',
+                    artist: 'Glass animals',
+                    url: 'songs/hw.mp3',
+                    cover: 'songs/hw.jpg',
+                },
+                {
+                    name: 'Let her go',
+                    artist: 'Ed Sheeran',
+                    url: 'songs/lhg.mp3',
+                    cover: 'songs/lhg.jpg',
+                },
+                {
+                    name: 'Dandelions',
+                    artist: 'Ruth B.',
+                    url: 'songs/dl.mp3',
+                    cover: 'songs/dl.jpg',
+                },
+    
+                ]
+            });
+
+            
+        </script>
+    
+    </body>
+    
+    </html>
+    

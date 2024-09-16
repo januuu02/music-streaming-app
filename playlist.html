@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- APlayer CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"/>
+    <title>Playlist</title>
+    <style>
+        .logo {
+            margin-left: -50px;
+            padding: 20px;
+            width: 180px;
+            cursor: pointer;
+        }
+
+        .navbar ul li {
+            font-family: 'Roboto', sans-serif;
+            list-style-type: none;
+            display: inline-block;
+            margin: 0 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .navbar ul li:hover {
+            background-color: rgb(248, 240, 225);
+            color: black;
+        }
+
+        .active {
+            background-color: rgb(248, 240, 225);
+            color: black;
+        }
+
+        .arrow {
+            font-size: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #5f5f5f;
+            font-size: 15px;
+        }
+    
+        body {
+            background-color: #fbc0c0;
+            font-family: Open sans;
+        }
+
+        img {
+            width: 80%;
+            min-height: 100px;
+        }
+
+        .main {
+            padding: 40px 0;
+        }
+
+        h3 {
+            font-size: 40px;
+            margin-bottom: 34px;
+            border-bottom: 4px solid #e6e6e6;
+            padding-bottom: 15px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        h4 {
+            font-size: 23px;
+            text-transform: uppercase;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        .right-col1 {
+            float: right;
+            margin-right: -5%;
+            margin-top: -90px;
+            display: flex;
+            align-items: center;
+        }  
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="centeral">
+            <div class="navbar">
+                <img src="logo (1).png" class="logo">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="music.html">MUSIC</a></li>
+                    <li class="active"><a href="playlist.html">PLAYLIST</a></li>
+                    <li><a href="http://127.0.0.1:5000">MASHUP</a></li>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3> Our Playlists </h3>
+                    <div class="right-col1">
+                        <img src="songs/play.png" id="icon">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <a href="pop.html" class="album-poster" data-switch="0">
+                        <img src="songs/pop.webp" alt="">
+                    </a>
+                    <h4>Pop</h4>
+                </div>
+                <div class="col-md-4">
+                    <a href="hh.html" class="album-poster" data-switch="1">
+                        <img src="songs/hh.jpg" alt="">
+                    </a>
+                    <h4>Hip-Hop</h4>
+                </div>
+                <div class="col-md-4">
+                    <a href="love.html" class="album-poster" data-switch="2">
+                        <img src="songs/love.jpg" alt="">
+                    </a>
+                    <h4>Love</h4>
+                </div>
+                <div class="col-md-4">
+                    <a href="chill.html" class="album-poster" data-switch="3">
+                        <img src="songs/chill.jpg" alt="">
+                    </a>
+                    <h4>Chill</h4>
+                </div>
+                <div class="col-md-4">
+                    <a href="rock.html" class="album-poster" data-switch="4">
+                        <img src="songs/rock.webp" alt="">
+                    </a>
+                    <h4>Rock</h4>
+                </div>
+                <div class="col-md-4">
+                    <a href="kp.html" class="album-poster" data-switch="5">
+                        <img src="songs/kp.jpeg" alt="">
+                    </a>
+                    <h4>K-pop</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+    
+</html>

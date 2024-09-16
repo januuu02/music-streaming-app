@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFCC Display</title>
+</head>
+<body>
+    <h2>Select Two Songs</h2>
+    <form id="songForm">
+        <label for="song1">Select Song 1:</label>
+        <select id="song1" name="song1">
+            <option value="song1.mp3">Song 1</option>
+            <option value="song2.mp3">Song 2</option>
+            <option value="song3.mp3">Song 3</option>
+            <!-- Add more options as needed -->
+        </select>
+        <br>
+        <label for="song2">Select Song 2:</label>
+        <select id="song2" name="song2">
+            <option value="song1.mp3">Song 1</option>
+            <option value="song2.mp3">Song 2</option>
+            <option value="song3.mp3">Song 3</option>
+            <!-- Add more options as needed -->
+        </select>
+        <br>
+        <button type="button" onclick="sendSongs()">Generate MFCC</button>
+    </form>
+
+    <div id="mfccContainer">
+        <!-- MFCC graphs will be displayed here -->
+    </div>
+
+    <script>
+        function sendSongs() {
+            var song1 = document.getElementById('song1').value;
+            var song2 = document.getElementById('song2').value;
+
+            // Send selected songs to Flask backend
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/generate_mfcc', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var mfccData = JSON.parse(xhr.responseText);
+                    displayMFCC(mfccData);
+                }
+            };
+            var data = JSON.stringify({song1: song1, song2: song2});
+            xhr.send(data);
+        }
+
+        function displayMFCC(mfccData) {
+            // Display MFCC graphs using mfccData
+            var mfccContainer = document.getElementById('mfccContainer');
+            mfccContainer.innerHTML = `
+                <img src="${mfccData.mfcc1_url}" alt="MFCC of Song 1">
+                <img src="${mfccData.mfcc2_url}" alt="MFCC of Song 2">
+            `;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
